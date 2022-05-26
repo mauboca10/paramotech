@@ -31,7 +31,7 @@ In order to run test specs in CLI, type "```npx cypress run```" will execute all
 
 The reports of the executions are saved in the file /mochawesome-report after the execution of the tests.
 
-##Tests
+## Tests
 ---
 
 There are two test. One for register new user and the other test is for verify a user nickname.
