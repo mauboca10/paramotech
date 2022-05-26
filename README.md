@@ -26,10 +26,12 @@ Cypress shows all steps taken within a test, and it will record before and after
 
 In order to run test specs in CLI, type "```npx cypress run```" will execute all test specs.  
 
-## REPORTERS
+## Reporters
+---
 
 The reports of the executions are saved in the file /mochawesome-report after the execution of the tests.
 
-##tests
+##Tests
+---
 
 There are two test. One for register new user and the other test is for verify a user nickname.
