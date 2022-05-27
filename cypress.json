@@ -1,0 +1,11 @@
+{
+    "baseUrl": "https://demo.casino",
+    "chromeWebSecurity": false,
+    "experimentalSessionAndOrigin": true,
+    "viewportWidth": 1980,
+    "viewportHeight": 1080,
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "overwrite": false
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "home": {
+        "singUpBtn": "[data-test='nav-reg-head']",
+        "singIn": "Sign in",
+        "loginBtn": "[data-test='nav-login-head']"
+    },
+    "registerEl": {
+        "email": "[data-test='input-email']",
+        "password": "[data-test='input-password']",
+        "reenterPassword": "[data-test='input-password_confirmation']",
+        "checkTyC": ".input__wrapper > label",
+        "answerToSecretQuestion": "[data-test='input-secret_answer']",
+        "userLogin": "[data-test='input-username']",
+        "createAccountBtn": "[data-test='control-submit']"
+    },
+    "logInElements:": {
+        "userName": "[data-test='input-username']",
+        "userPassword": "[data-test='input-password']",
+        "submitBtn": "[data-test= 'control-submit']"
+    },
+    "profileElements": {
+        "userProfileBtn": "challengeusr1",
+        "goToProfileBtn": "[data-test='nav-reg-head']",
+        "profileSettingsBtn": "Profile settings",
+        "nickName": "[data-test='input-nickname']"
+    }
+}

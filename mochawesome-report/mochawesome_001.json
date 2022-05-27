@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-05-26T01:57:48.618Z",
+    "end": "2022-05-26T01:58:30.889Z",
+    "duration": 42271,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "901a89fa-da65-45a5-806c-2bd69598ba25",
+      "title": "",
+      "fullFile": "cypress/integration/registerUser.spec.js",
+      "file": "cypress/integration/registerUser.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5828eaea-7eac-4d3f-b256-3b6db40e9ba3",
+          "title": "Register User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should register new user successfully",
+              "fullTitle": "Register User Should register new user successfully",
+              "timedOut": null,
+              "duration": 41975,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.session('Register', () => {\n  cy.visit(\"/\");\n  cy.contains(\"Got it\").click();\n  cy.get(_elements.home.singUpBtn).click();\n  cy.url().should('eq', 'https://demo.casino/user/registration');\n  cy.get(_elements.registerEl.email).should(\"be.enabled\");\n  cy.get(_elements.registerEl.email).type(newEmail);\n  cy.get(_elements.registerEl.password).type(_registerData.registerData.password);\n  cy.get(_elements.registerEl.reenterPassword).type(_registerData.registerData.reenterPassword);\n  cy.currencyOption('1');\n  cy.get(_elements.registerEl.checkTyC).click();\n  cy.secretQuestion(4);\n  cy.get(_elements.registerEl.answerToSecretQuestion).type(_registerData.registerData.answerSecretQuestion);\n  cy.get(_elements.registerEl.userLogin).type(newUserLogin);\n  cy.get(_elements.registerEl.createAccountBtn).click();\n  cy.contains('Congratulations!').should(\"have.class\", \"notification__title\");\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Congratulations!' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Congratulations!' but never did.\n    at Object.eval [as setup] (https://demo.casino/__cypress/tests?p=cypress/integration/registerUser.spec.js:156:39)",
+                "diff": null
+              },
+              "uuid": "b3cc1a19-7d7e-48bf-8b25-bf1e1b7ec8c1",
+              "parentUUID": "5828eaea-7eac-4d3f-b256-3b6db40e9ba3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b3cc1a19-7d7e-48bf-8b25-bf1e1b7ec8c1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41975,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
