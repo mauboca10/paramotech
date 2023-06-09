@@ -39,35 +39,31 @@ Cypress.Commands.add('currencyOption', (option) => {
                             cy.get(".selectric-below [data-index='8']").click()
                             break;
                     }
-                        
-                        
                 })
-                cy.contains('1000 EUR').should('be.visible')
             })
 })
 
-//Command for selecting Secret question option
-Cypress.Commands.add('secretQuestion', (option) => {
-    cy.get('.selectric--placeholder').click().then(()=>{
-        cy.get('.selectric-items').then( () => {
-            cy.get(".selectric-below [data-index=" + option + "]").last().click()
+//Select Category of Contacts form
+Cypress.Commands.add('category', (option) => {
+    cy.get('.label').click().then(()=>{
+        cy.get('.selectric-scroll').then(()=>{
+            switch (option) {
+                case "Financial questions":
+                    cy.get(".selectric-below [data-index='1']").click()
+                    break;
+
+                case "Game rules":
+                    cy.get(".selectric-below [data-index='2']").click()
+                    break;
+
+                case "Technical questions":
+                    cy.get(".selectric-below [data-index='3']").click()
+                    break; 
+
+                case "Bonuses":
+                    cy.get(".selectric-below [data-index='4']").click()
+                    break;
+            }     
         })
     })
-})
-
-//Command for handle captchaV2
-Cypress.Commands.add('clickRecaptcha', () => {
-    cy.window().then(win => {
-        win.document
-            .querySelector("iframe[src*='recaptcha']")
-            .contentDocument.getElementById("recaptcha-token")
-            .click()
-    })
-})
-
-//Command for doing successful Login
-Cypress.Commands.add('login', (user, password) => {
-        cy.get("[data-test='input-username']").type(user)
-        cy.get("[data-test='input-password']").type(password)
-        cy.get("[data-test= 'control-submit']").click()
 })
