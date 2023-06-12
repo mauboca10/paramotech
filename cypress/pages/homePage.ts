@@ -1,17 +1,13 @@
 class home {
     elements = {
-        singUpBtn: () => cy.get("[data-test='nav-reg-head']"),
-        singIn: () => cy.contains("Sign in").first(),
-        contactsLink: () => cy.contains("Contacts")
+        austinLink: () => cy.contains("Austin")
     }
 
-    clickOnsingUpBtn () {
-        this.elements.singUpBtn().click()
+    goToAustinOffice () {
+        this.elements.austinLink().click({force: true})
     }
 
-    goToContactsPage () {
-        this.elements.contactsLink().click({force: true})
-    }
+    
 }
 
 export const homePage = new home();

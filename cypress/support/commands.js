@@ -67,3 +67,13 @@ Cypress.Commands.add('category', (option) => {
         })
     })
 })
+
+Cypress.Commands.add('getIframeBody', (iframeSelector) => {
+    // Obtén el documento del iframe
+    return cy
+    .get(iframeSelector)
+    .its('body')
+    .should('not.be.empty')
+    // Envuelve el cuerpo del documento en un objeto jQuery
+    .then(cy.wrap)
+})
